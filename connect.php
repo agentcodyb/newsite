@@ -1,5 +1,5 @@
 <?php
-   $con = mysqli_connect("remotemysql.com", "xsoVo3Usy6", "op2tUkCQBA");
+   $con = mysqli_connect("remotemysql.com", "xsoVo3Usy6", "op2tUkCQBA", "attendance");
    
    if (!$con) {
       die('Could not connect: ' . mysqli_error());
@@ -15,7 +15,8 @@
          $dbhost = 'remotemysql.com:3306';
          $dbuser = 'xsoVo3Usy6';
          $dbpass = 'op2tUkCQBA';
-         $conn = mysqli_connect($dbhost, $dbuser, $dbpass);
+         $dbname = 'attendance';
+         $conn = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname);
          
          if(! $conn ) {
             die('Could not connect: ' . mysqli_error());
